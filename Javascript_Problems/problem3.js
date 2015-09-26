@@ -3,6 +3,22 @@
  * What is the largest prime factor of the number 600851475143?
 */
 
+/*
+	This is a slight variation on RebootJeff's Solution with a bit
+	of optimization. It still largely uses the brute force method,
+	but instead of checking from the number down it starts at half
+	of the number.
+	We can do this because if there is at least 1 prime factor that
+	isn't the number itself, then there must be at least 2 prime
+	factors. Since the lowest prime value possible is 2, that means
+	that the largest possible prime factor would be num/2 at most.
+	What this means is that it cuts runtime in half, which still isn't
+	great on the 6 year old laptop I wrote this on.
+
+	IMPORTANT NOTE: I tested this through a unix terminal. If you want
+	to test this in a browser you will need to modify output.
+*/
+
 // check to see if a number is prime or not
 var isPrime = function (number) {
 	var maxVal = Math.ceil(Math.sqrt(number));

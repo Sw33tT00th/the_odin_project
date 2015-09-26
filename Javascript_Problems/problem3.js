@@ -35,6 +35,9 @@ var isPrime = function (number) {
 }
 
 var findMaxPrime = function (number) {
+	if (isPrime(number)) {
+		return number;
+	}
 	var factor = Math.ceil(number / 2);
 	while (factor > 1) {
 		if (number % factor === 0 && isPrime(factor)) {

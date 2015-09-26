@@ -3,7 +3,6 @@
  * What is the largest prime factor of the number 600851475143?
 */
 
-
 // check to see if a number is prime or not
 var isPrime = function (number) {
 	var maxVal = Math.ceil(Math.sqrt(number));
@@ -20,7 +19,7 @@ var isPrime = function (number) {
 }
 
 var findMaxPrime = function (number) {
-	var factor = number - 1;
+	var factor = Math.ceil(number / 2);
 	while (factor > 1) {
 		if (number % factor === 0 && isPrime(factor)) {
 			return factor;
@@ -30,7 +29,7 @@ var findMaxPrime = function (number) {
 	return number;
 }
 
-var num = 60085147;
+var num = 600851475;
 
 var start = new Date().getTime();
 print('Answer: ' + findMaxPrime(num));

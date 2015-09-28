@@ -1,0 +1,25 @@
+div > .grid {
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+	background-color: black;
+	opacity: 0.1;
+	border-width: 0;
+	margin: -4px 0 0 0;
+}
+
+#content {
+	width: 1152px;
+	margin: 10px auto;
+}
+
+.button {
+	float: center;
+	background-color: #E6E6E6;
+	border-radius: 5px;
+	border: 1px solid #CCCCCC;
+	color: black;
+	padding: 1px 10px 1px 10px;
+	margin: 10px 0 0 0;
+	text-decoration: none;
+}
